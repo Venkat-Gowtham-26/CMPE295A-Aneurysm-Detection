@@ -1,0 +1,17 @@
+{
+  "name": "IntracranialAneurysm",
+  "description": "RSNA Intracranial Aneurysm Detection",
+  "tensorImageSize": "3D",
+  "reference": "RSNA 2025 Challenge",
+  "licence": "CC-BY-SA 4.0",
+  "release": "1.0",
+  "channel_names": {
+    "0": "MRA"
+  },
+  "labels": {
+    "background": 0,
+    "vessel": 1
+  },
+  "numTraining": 5,
+  "file_ending": ".nii.gz"
+}
