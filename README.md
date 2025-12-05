@@ -20,12 +20,8 @@ Intracranial aneurysms affect approximately 3.2% of the global population. This 
 ```
 ├── preprocessing.py          # Data preprocessing pipeline
 ├── dataset.json              # nnU-Net dataset configuration
-├── visualizations/           # Output visualizations
-│   ├── preprocessing_visualization.png
-│   ├── segmentation_visualization.png
-│   └── nnunet_data_visualization.png
+├── *.png                     # Visualization outputs
 └── notebooks/                # Jupyter notebooks
-    └── preprocessing_pipeline.ipynb
 ```
 
 ## Preprocessing Pipeline
@@ -50,13 +46,13 @@ Raw DICOM → Load Series → Normalize Intensity → Resample (1mm³) → NIfTI
 ## Visualizations
 
 ### Preprocessed MRI Slices
-![Preprocessing](visualizations/preprocessing_visualization.png)
+![Preprocessing](preprocessing_visualization.png)
 
 ### Vessel Segmentation
-![Segmentation](visualizations/segmentation_visualization.png)
+![Segmentation](segmentation_visualization.png)
 
 ### nnU-Net Data with Labels
-![nnUNet Data](visualizations/nnunet_data_visualization.png)
+![nnUNet Data](nnunet_data_visualization.png)
 
 ## Usage
 ```python
@@ -94,7 +90,3 @@ volume, metadata = preprocessor.preprocess('/path/to/dicom/series')
 1. Isensee, F., et al. "nnU-Net: A self-configuring method for deep learning-based biomedical image segmentation." Nature Methods, 2021.
 2. Çiçek, Ö., et al. "3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation." MICCAI, 2016.
 3. RSNA Intracranial Aneurysm Detection Challenge, 2025.
-
-## License
-
-MIT License
